@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    height: 100%;
+    --font-title: 'viaoda_libreregular'; 
+    --Background-header: #162028;
+    --texto-no-menu: #425564;
+    --Cor-dos-textos: #555;
+    --Cor-fundo-footer: #0b171f;
+    --Cor-texto-footer: #6f8597;
+    --cor-texto-galery: #003d52;
+}
+
+@font-face {        
+    font-family: 'viaoda_libreregular';
+    src: url('Fonts/ViaodaLibre-Regular.ttf') format("truetype"), 
+         url('Fonts/viaodalibre-regular.woff2') format('woff2'),
+         url('Fonts/viaodalibre-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(imagens/topo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;  
+}
+.header-container{
+    background-color: var(--Background-header);
+    height: 80px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 120px;
+}
+h1, h2{
+    font-family: var(--font-title);
+}
+.logo h1{
+    color: white;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;    
+}
+nav ul li a{
+    text-decoration: none;  
+    color: var(--texto-no-menu);
+    text-transform: uppercase;
+    font-size: 20px;  
+    margin: 30px;    
+    letter-spacing: 2px;
+}
+nav ul li a:hover{  
+    color: #8b8383; 
+}
+article, section{
+    padding: 0 100px;
+}
+article h2{    
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--Cor-dos-textos);
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+article p{
+    text-align: center;
+    font-size: 20px;
+    color: var(--Cor-dos-textos);
+    letter-spacing: 2px;
+    line-height: 38px;
+    padding: 0 80px; 
+    margin-bottom: 100px;
+}
+.galery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.galery-box img{
+    width: 320px;
+}
+.galery h3, .galery p{
+    color: var(--cor-texto-galery);
+    text-align: center;
+    margin-top: 20px;      
+}
+.galery h3{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.galery p{
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+.sobre-nos{
+    background-image: url(imagens/bg_detalhe.png); 
+    background-repeat: no-repeat;
+    background-size: cover;   
+    background-position: right bottom;
+}
+.sobre-nos h2{
+    padding-top: 80px;
+    color: white;
+    font-size: 80px;
+    font-weight: 300;
+}
+.sobre-nos p{
+    padding-top: 50px;
+    width: 60%;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-bottom: 130px;
+}
+footer{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cor-fundo-footer); 
+    height: 80px;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+footer p{
+    color: #8b8383;
+}  
+footer p:hover{
+    color: white;   
+}
+
+@media (max-width: 1030px){
+    header{
+        background-position: 20% 50%;  
+    }
+    .sobre-nos h2{
+        padding-top: 80px;     
+        font-size: 50px;       
+    }
+    .sobre-nos p{
+        padding-top: 50px;
+        width: 90%;        
+        font-size: 18px;       
+        line-height: 30px;
+        letter-spacing: 1px;
+        padding-bottom: 130px;
+    }
+}
+@media (max-width: 811px){
+    header{
+        background-position: 30% 50%;  
+    }
+    
+    nav ul{
+        display: none;
+    }
+    .sobre-nos h2{
+        padding-top: 50px;
+        color: white;
+        font-size: 33px;
+        font-weight: 300;
+    }
+    .sobre-nos p{
+        width: 100%;
+    }
+    article h2{    
+        margin-top: 80px;
+        margin-bottom: 30px; 
+        font-size: 40px;
+        color: var(--Cor-dos-textos);
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+    article p{        
+        font-size: 20px;        
+        letter-spacing: 1px;
+        line-height: 30px;
+        padding: 0 10px; 
+        margin-bottom: 100px;
+    }
+    article, section{
+        padding: 0 80px;
+    }
+}
+@media (max-width: 430px){
+    article, section{
+        padding: 0 20px;
+    }
+}
